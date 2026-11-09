@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Akshitha’s Data Analyst portfolio. Explore reproducible retail and support operations case studies using Python, SQL, and SQLite.">
+<title>Akshitha | Data Analyst Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<script src="portfolio.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top wrap">
+  <a class="brand" href="#home"><span class="mark">A</span> Akshitha</a>
+  <nav aria-label="Main navigation"><a href="#projects">Work</a><a href="#methods">Methods</a><a href="#lab">Lab</a><a href="#about">About</a></nav>
+  <a class="button ask-link" href="https://github.com/akshithaprasadthak">View GitHub ↗</a>
+</header>
+<main id="main">
+<section class="hero wrap" id="home">
+  <div>
+    <p class="eyebrow"><span></span> DATA ANALYST PORTFOLIO</p>
+    <h1>From data to <em>decisions.</em></h1>
+    <p class="lede">I’m Akshitha. Explore two case studies that use Python and SQL to measure retail performance and find where support teams miss first-response targets.</p>
+    <div class="actions"><a class="button primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a><a class="button" href="https://github.com/akshithaprasadthak">View GitHub <span aria-hidden="true">↗</span></a></div>
+  </div>
+  <aside class="flow" aria-label="Portfolio at a glance">
+    <div class="flow-head"><span>PORTFOLIO AT A GLANCE</span><span class="signal">● SYNTHETIC DATA</span></div>
+    <h2>Two analytics case studies</h2>
+    <a class="step" href="#retail"><span>01</span><div><strong>$188,817.44</strong><small>Net revenue across 1,200 sample orders</small></div></a>
+    <a class="step" href="#support"><span>02</span><div><strong>64.9%</strong><small>First-response SLA attainment in a 1,000-ticket sample</small></div></a>
+    <a class="feature-link" href="#lab">Compare the results ↗</a>
+  </aside>
+</section>
+<div class="stack"><div class="wrap"><span>CORE TOOLKIT</span><b>Python</b><b>SQL</b><b>SQLite</b><b>CSV reporting</b><b>HTML dashboards</b><b>Data validation</b></div></div>
+<section class="wrap section" id="projects">
+  <p class="eyebrow">01 / SELECTED WORK</p><h2>See the analysis in action.</h2>
+  <p class="sub">Each project includes SQL queries, sample data, CSV reports, and a reproducible dashboard.</p>
+  <div class="projects-grid">
+    <article class="project" id="retail">
+      <p class="eyebrow">RETAIL ANALYTICS</p><h3>Retail Sales &amp; Returns</h3>
+      <p>Which categories drive net revenue after refunds? Compare sales by month, product category, and sales channel.</p>
+      <p class="proof"><strong>$87.6K</strong> in net revenue for Electronics, the leading category in the sample.</p>
+      <div class="tags"><span>SQL aggregation</span><span>Revenue</span><span>Refunds</span></div>
+      <div class="links"><a href="retail.html">Open dashboard ↗</a><a href="https://github.com/akshithaprasadthak/retail-sales-analytics">GitHub source ↗</a></div>
+    </article>
+    <article class="project" id="support">
+      <p class="eyebrow">SUPPORT OPERATIONS</p><h3>Customer Support SLA</h3>
+      <p>Which channels miss first-response targets most often? Compare attainment and breach counts by week, channel, and priority.</p>
+      <p class="proof"><strong>183 breaches</strong> in Email, the highest breach count among the sample channels.</p>
+      <div class="tags"><span>SQL CASE</span><span>Time windows</span><span>SLA metrics</span></div>
+      <div class="links"><a href="support.html">Open dashboard ↗</a><a href="https://github.com/akshithaprasadthak/customer-support-sla-analytics">GitHub source ↗</a></div>
+    </article>
+  </div>
+</section>
+<section class="wrap section" id="methods">
+  <p class="eyebrow">02 / ANALYTICS WORKFLOW</p><h2>How the numbers are built.</h2>
+  <p class="sub">Select a stage to see how the projects move from raw records to a result a reader can verify.</p>
+  <div class="explorer architecture" data-explorer>
+    <div class="console-head"><span>● METHOD EXPLORER</span><span>PYTHON → SQLITE → DASHBOARD</span></div>
+    <div class="explorer-controls" role="group" aria-label="Analysis stages">
+      <button type="button" aria-pressed="true" aria-controls="prepare" data-panel="prepare"><small>01 / PREPARE</small>Load the data</button>
+      <button type="button" aria-pressed="false" aria-controls="measure" data-panel="measure"><small>02 / MEASURE</small>Define the KPIs</button>
+      <button type="button" aria-pressed="false" aria-controls="verify" data-panel="verify"><small>03 / VERIFY</small>Check the results</button>
+    </div>
+    <div class="explorer-output" aria-live="polite">
+      <div id="prepare"><h3>Make the sample reproducible.</h3><p>Python generates a fixed-seed CSV and loads it into SQLite. Each dataset has a defined grain of one order or one support ticket.</p></div>
+      <div id="measure" hidden><h3>Write down the calculation.</h3><p>Net revenue subtracts refunds from gross sales. First-response SLA attainment divides met tickets by met plus breached tickets. Pending tickets stay outside that denominator.</p></div>
+      <div id="verify" hidden><h3>Reconcile totals before reporting.</h3><p>Retail totals reconcile across months, categories, and channels. The support project reconciles ticket and breach counts and checks tickets at the response deadline.</p></div>
+    </div>
+  </div>
+</section>
+<section class="wrap section" id="lab">
+  <p class="eyebrow">03 / EVIDENCE LAB</p><h2>Compare the <em>sample results.</em></h2>
+  <p class="sub">Switch between the two analyses. Each chart uses results exported from its project.</p>
+  <div class="explorer" data-explorer>
+    <div class="explorer-controls" role="group" aria-label="Compare project results">
+      <button type="button" aria-pressed="true" aria-controls="retail-results" data-panel="retail-results"><small>01 / RETAIL</small>Net revenue by category</button>
+      <button type="button" aria-pressed="false" aria-controls="support-results" data-panel="support-results"><small>02 / SUPPORT</small>SLA attainment by channel</button>
+    </div>
+    <div class="explorer-output" aria-live="polite">
+      <div id="retail-results"><h3>Net revenue by category</h3>
+        <div class="metric-bar"><span>Electronics</span><meter min="0" max="90000" value="87594.45" aria-label="Electronics net revenue"></meter><b>$87.6K</b></div>
+        <div class="metric-bar"><span>Home</span><meter min="0" max="90000" value="45409.86" aria-label="Home net revenue"></meter><b>$45.4K</b></div>
+        <div class="metric-bar"><span>Apparel</span><meter min="0" max="90000" value="29712.18" aria-label="Apparel net revenue"></meter><b>$29.7K</b></div>
+        <div class="metric-bar"><span>Beauty</span><meter min="0" max="90000" value="26100.95" aria-label="Beauty net revenue"></meter><b>$26.1K</b></div>
+        <div class="links"><a href="retail.html">See monthly and channel breakdowns ↗</a></div>
+      </div>
+      <div id="support-results" hidden><h3>First-response SLA attainment</h3>
+        <div class="metric-bar"><span>Email</span><meter min="0" max="100" value="44" aria-label="Email SLA attainment"></meter><b>44.0%</b></div>
+        <div class="metric-bar"><span>Web</span><meter min="0" max="100" value="63.5" aria-label="Web SLA attainment"></meter><b>63.5%</b></div>
+        <div class="metric-bar"><span>Chat</span><meter min="0" max="100" value="87.5" aria-label="Chat SLA attainment"></meter><b>87.5%</b></div>
+        <div class="links"><a href="support.html">See weekly and priority breakdowns ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="wrap section" id="about">
+  <p class="eyebrow">04 / ABOUT</p>
+  <div class="contact"><div><h2>Akshitha</h2><p>I use SQL, Python, and clear KPI definitions to make business data easier to explore. My portfolio focuses on reproducible analysis and reporting.</p></div><a class="button primary" href="https://github.com/akshithaprasadthak">Connect on GitHub ↗</a></div>
+</section>
+</main>
+<footer class="wrap"><span>Akshitha · Data Analyst Portfolio</span><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
