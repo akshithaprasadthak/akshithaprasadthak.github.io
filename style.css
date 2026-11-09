@@ -160,3 +160,11 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10
   .metric-bar { grid-template-columns: 5.3rem minmax(20px, 1fr) 3.5rem; gap: 6px; font-size: .75rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.experience-list { display: grid; gap: 12px; margin-top: 24px; }
+.experience-role { display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.55fr); gap: 18px 32px; padding: 23px 25px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--plum); border-radius: 6px 16px 16px 6px; }
+.experience-role:nth-child(even) { border-left-color: var(--teal); }
+.experience-role h3 { margin-bottom: 3px; }
+.experience-role p:not(.eyebrow) { color: var(--muted); margin-bottom: 10px; }
+.experience-role .role-label { font-size: .9rem; font-weight: 650; }
+@media (max-width: 640px) { .experience-role { grid-template-columns: 1fr; gap: 4px; padding: 18px; } }
